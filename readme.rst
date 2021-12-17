@@ -2,7 +2,28 @@
 Penjelasan
 ###################
 
-SIMWA merupakan Sistem Informasi Manajemen Mahasiswa, merupakan sebuah aplikasi yang akan memanage data mahasiswa, yang mana belakangan ini masih banyak instansi yang masih menggunakan pendataan menggunakan dokumen atua kertas-kertas yang membuat cepat rusak seiring tahun dan juga rentan hilang. Fitur yang terdapat dalam aplikasi ini yaitu admin bisa menginputkan melalui fitur CRUD (Create,Read,Update,Delete) dan juga untuk admin dapat menggunakan sebuah fitur login dan register, dan juga fitur Cart dan form_validation untuk bisa berbelanja dan juga memvalidasi suatu inputan yang dimasukan ke form
+SIPKEWA adalah Sistem Informasi Penjualan Kepunyaan Mahasiswa, yang ditujukan sebagai sarana implementasi usaha untuk mahasiswa agar bisa mempunyai jiwa wirausaha muda dan juga mandiri diusaha muda serta sebagai sarana kesempatan mengasah jiwa wirausaha, meningkatkan soft skill dengan terlibat langsung dalam dunia kerja, meningkatkan keberanian memulai usaha, mendapat dukungan modaldan pendampingan secara terpadu, membatu mengolah pola pikir generasi muda sejak dini.mampu menjadi pelopor pembangunan serta mengurangi adanya pengangguran diIndonesia. Dimana didalamnya memiliki fitur-fitur sebagai berikut :
+1. Login 
+2. Register
+3. Konfirmasi Pembayaran
+4. Whislist
+5. Cart
+6. Checkout
+7. Kategori Barang
+8. Fitur Pencarian
+9. Fitur Detail Barang
+10. Export PDF,Excel
+11. Input form
+●	Input text
+●	Input wysiwyg
+●	Input email
+●	Input Password
+●	Input tanggal
+●	Input foto / file
+●	Input Option
+●	Checkbox
+●	Radio Button
+
 
 ###################
 Login
