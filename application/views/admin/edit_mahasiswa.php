@@ -8,9 +8,8 @@
                     <hr>
 
                     <?php
-                    foreach ($mahasiswa as $row) 
-                    $d=json_decode($row->hobi,TRUE);
-                    { ?>
+                    foreach ($mahasiswa as $row)
+                        $d = json_decode($row->hobi, TRUE); { ?>
                         <?php echo form_open_multipart('mahasiswa/update/'); ?>
                         <div class="form-group">
                             <label>Nama</label>
@@ -82,10 +81,13 @@
                             Laki-Laki<br>
                             <input type="radio" name="jenkel" value="female" <?php if ($row->jenkel == 'female') echo 'checked' ?>>Perempuan<br><br>
                         </div>
+                        <?php
+                        $check = explode(' , ', $row -> hobi);
+                        ?>
                         <label>Hobi</label><br>
-                            <input type="checkbox" name="hobi[]" value="membaca" <?php if($d == "membaca"){echo 'checked'; } ?>> Membaca<br>
-                            <input type="checkbox" name="hobi[]" value="sepakbola" <?php if($d == "sepakbola"){echo 'checked'; } ?>> Sepak Bola<br>
-                            <input type="checkbox" name="hobi[]" value="programming" <?php if($d == "programming"){echo 'checked'; } ?>> Programming<br>
+                        <input type="checkbox" name="hobi[]" value="membaca" <?php in_array ('membaca', $check) ? print "checked" : ""; ?>> Membaca<br>
+                        <input type="checkbox" name="hobi[]" value="sepakbola"<?php in_array ('sepakbola', $check) ? print "checked" : ""; ?>> Sepak Bola<br>
+                        <input type="checkbox" name="hobi[]" value="programming"<?php in_array ('programming', $check) ? print "checked" : ""; ?>> Programming<br>
                         <br><br>
                         <div class="form-group">
                             <label> Foto</label><br>
