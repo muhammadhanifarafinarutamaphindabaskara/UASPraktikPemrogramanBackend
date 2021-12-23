@@ -209,51 +209,7 @@ class Mahasiswa extends CI_Controller
         $this->dompdf->render();
         $this->dompdf->stream('laporan_mahasiswa.pdf', array('Attachment' => 0));
     }
-
-    public function excel()
-    {
-        $data['mahasiswa'] = $this->M_mahasiswa->tampil_data('tb_mahasiswa')->result();
-
-        $spreadsheet = new Spreadsheet;
-
-        $spreadsheet->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'No')
-            ->setCellValue('B1', 'Nama')
-            ->setCellValue('C1', 'Nim')
-            ->setCellValue('D1', 'Tanggal Lahir')
-            ->setCellValue('E1', 'Jurusan')
-            ->setCellValue('F1', 'Alamat')
-            ->setCellValue('G1', 'Email')
-            ->setCellValue('H1', 'No. Telp')
-            ->setCellValue('I1', 'Jenis Kelamin');
-
-        $kolom = 2;
-        $nomor = 1;
-        foreach ($data['mahasiswa'] as $mhs) {
-
-            $spreadsheet->setActiveSheetIndex(0)
-                ->setCellValue('A' . $kolom, $nomor++)
-                ->setCellValue('B' . $kolom, $mhs->nama)
-                ->setCellValue('C' . $kolom, $mhs->nim)
-                ->setCellValue('D' . $kolom, $mhs->tgl_lahir)
-                ->setCellValue('E' . $kolom, $mhs->jurusan)
-                ->setCellValue('F' . $kolom, $mhs->alamat)
-                ->setCellValue('G' . $kolom, $mhs->email)
-                ->setCellValue('H' . $kolom, $mhs->no_telp)
-                ->setCellValue('I' . $kolom, $mhs->jenkel);
-
-            $kolom++;
-        }
-
-        $writer = new Xlsx($spreadsheet);
-
-        header('Content-Type: application/vnd.ms-excel');
-        header('Content-Disposition: attachment;filename="Mahasiswa.xlsx"');
-        header('Cache-Control: max-age=0');
-
-        $writer->save('php://output');
-    }
-
+    
     public function search()
     {
         $keyword = $this->input->post('keyword');
