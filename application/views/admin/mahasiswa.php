@@ -25,7 +25,6 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="<?php echo base_url() . 'mahasiswa/pdf' ?>">PDF</a>
-                                    <a class="dropdown-item" href="<?php echo base_url() . 'mahasiswa/excel' ?>">EXCEL</a>
                                 </div>
                             </div>
 
@@ -142,16 +141,15 @@
                     <input type="radio" name="jenkel" value="female"> Female<br>
                 </div>
                 <div class="form-group">
-                <label>Hobi</label><br>
+                    <label>Hobi</label><br>
                     <input type="checkbox" name="hobi[]" value="Membaca"> Membaca<br>
-                    <input type="checkbox" name="hobi[]" value="Sepak Bola"> Sepak Bola<br>
+                    <input type="checkbox" name="hobi[]" value="SepakBola"> Sepak Bola<br>
                     <input type="checkbox" name="hobi[]" value="Programming"> Programming<br>
-                    </div>
+                </div>
                 <div class="form-group">
                     <label>Upload Foto</label>
                     <input type="file" name="foto" class="form-control" required>
                 </div>
-
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                 <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
                 <?php echo form_close(); ?>
